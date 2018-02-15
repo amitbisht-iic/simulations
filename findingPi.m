@@ -1,0 +1,1 @@
+n=[1000,4000,6000];piValue=zeros(1,3);for j=1:length(n)	circle=randn(n(j),1);	square=randn(n(j),1);	result=sqrt((circle.^2).+(square.^2));	for i=1:n(j)		if (result(i,1)<=1)			piValue(j)=piValue(j)+1;		end	endendfor k=1:length(n)	fprintf('%d \t %d \t %d\n',n(k),piValue(k),4*piValue(k)/n(k))end
